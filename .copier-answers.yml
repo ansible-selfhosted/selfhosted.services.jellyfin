@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier
+_commit: 158355b
+_src_path: gh:ansible-selfhosted/selfhosted-role-template
+author_company: ''
+author_email: git@speakintel.net
+author_name: SpeakinTelnet
+collection_name: services
+copyright_holder: SpeakinTelnet
+license: MIT
+related_url: https://jellyfin.org/docs/
+repository_host: github.com
+repository_url: https://github.com/ansible-selfhosted/selfhosted.services.jellyfin
+role_name: jellyfin
+short_description: A role to deploy Jellyfin using rootless Podman with systemd.

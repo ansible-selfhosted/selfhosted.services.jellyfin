@@ -1,0 +1,4 @@
+---
+# defaults file for services.jellyfin
+
+published_port: 8080
