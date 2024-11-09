@@ -21,10 +21,10 @@ A role to deploy Jellyfin using rootless Podman with systemd.
 
 |Option|Description|Type|Required|Default|
 |---|---|---|---|---|
-|jellyfin_cache_path|The path for the Jellyfin cache.|str|False|<ansible user home>/.config/jellyfin/cache|
-|jellyfin_config_path|The path for the Jellyfin config.|str|False|<ansible user home>/.config/jellyfin/config|
+|jellyfin_cache_path|The path for the Jellyfin cache.|str|False|~/.config/jellyfin/cache|
+|jellyfin_config_path|The path for the Jellyfin config.|str|False|~/.config/jellyfin/config|
 |jellyfin_hardware_encoding|If hardware encoding should be used.|bool|False|False|
-|jellyfin_media_path|The path for the Jellyfin media.|str|False|<ansible user home>/.config/jellyfin/media|
+|jellyfin_media_path|The path for the Jellyfin media.|str|False|~/.config/jellyfin/media|
 |jellyfin_version|The version of Jellyfin to install.|str|False|latest|
 |jellyfin_web_port|The port for the web server.|int|False|8096|
 

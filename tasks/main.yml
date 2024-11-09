@@ -8,9 +8,9 @@
 
 - name: Normalize default paths
   ansible.builtin.set_fact:
-    jellyfin_cache_path: "{{  jellyfin_cache_path | replace('<ansible user home>', user_info.home) }}"
-    jellyfin_config_path: "{{ jellyfin_config_path | replace('<ansible user home>', user_info.home) }}"
-    jellyfin_media_path: "{{  jellyfin_media_path | replace('<ansible user home>', user_info.home) }}"
+    jellyfin_cache_path: "{{  jellyfin_cache_path | replace('~', user_info.home) }}"
+    jellyfin_config_path: "{{ jellyfin_config_path | replace('~', user_info.home) }}"
+    jellyfin_media_path: "{{  jellyfin_media_path | replace('~', user_info.home) }}"
 
 - name: Create Jellyfin directories
   ansible.builtin.file:

@@ -11,14 +11,14 @@ argument_specs:
       jellyfin_cache_path:
         type: str
         required: false
-        default: <ansible user home>/.config/jellyfin/cache
+        default: ~/.config/jellyfin/cache
         description:
           - The path for the Jellyfin cache.
 
       jellyfin_config_path:
         type: str
         required: false
-        default: <ansible user home>/.config/jellyfin/config
+        default: ~/.config/jellyfin/config
         description:
           - The path for the Jellyfin config.
 
@@ -32,7 +32,7 @@ argument_specs:
       jellyfin_media_path:
         type: str
         required: false
-        default: <ansible user home>/.config/jellyfin/media
+        default: ~/.config/jellyfin/media
         description:
           - The path for the Jellyfin media.
 
