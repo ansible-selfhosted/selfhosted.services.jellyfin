@@ -1,4 +1,7 @@
 ---
-# defaults file for services.jellyfin
-
-published_port: 8080
+jellyfin_cache_path: <ansible user home>/.config/jellyfin/cache
+jellyfin_config_path: <ansible user home>/.config/jellyfin/config
+jellyfin_hardware_encoding: false
+jellyfin_media_path: <ansible user home>/.config/jellyfin/media
+jellyfin_version: latest
+jellyfin_web_port: 8096

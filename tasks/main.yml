@@ -6,20 +6,31 @@
     state: present
   register: user_info
 
+- name: Normalize default paths
+  ansible.builtin.set_fact:
+    jellyfin_cache_path: "{{  jellyfin_cache_path | replace('<ansible user home>', user_info.home) }}"
+    jellyfin_config_path: "{{ jellyfin_config_path | replace('<ansible user home>', user_info.home) }}"
+    jellyfin_media_path: "{{  jellyfin_media_path | replace('<ansible user home>', user_info.home) }}"
+
+- name: Create Jellyfin directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0750"
+  loop:
+    - "{{ jellyfin_cache_path }}"
+    - "{{ jellyfin_config_path }}"
+    - "{{ jellyfin_media_path }}"
+
 - name: Put container related files on the host
   ansible.builtin.template:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
+    src: jellyfin.container.j2
+    dest: "{{ user_info.home }}/.config/containers/systemd/jellyfin.container"
     mode: "0640"
-  loop:
-    - {
-      "src": "httpd.container.j2",
-      "dest": "{{ user_info.home }}/.config/containers/systemd/httpd.container",
-    }
 
 - name: Start the container service
   ansible.builtin.systemd:
-    name: httpd
+    name: jellyfin
     state: started
     scope: user
     enabled: true
