@@ -1,7 +1,7 @@
 # Changes here will be overwritten by Copier
-_commit: 158355b
+_commit: 0.2.0
 _src_path: gh:ansible-selfhosted/selfhosted-role-template
-author_company: ''
+author_company: '""'
 author_email: git@speakintel.net
 author_name: SpeakinTelnet
 collection_name: services
