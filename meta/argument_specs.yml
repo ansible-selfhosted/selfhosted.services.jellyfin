@@ -35,6 +35,7 @@ argument_specs:
         default: ~/.config/jellyfin/media
         description:
           - The path for the Jellyfin media.
+          - It is recommended to share the same data directory with other media managing services
 
       jellyfin_version:
         type: str

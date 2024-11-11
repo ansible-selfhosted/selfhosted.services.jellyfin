@@ -2,6 +2,6 @@
 jellyfin_cache_path: ~/.config/jellyfin/cache
 jellyfin_config_path: ~/.config/jellyfin/config
 jellyfin_hardware_encoding: false
-jellyfin_media_path: ~/.config/jellyfin/media
+jellyfin_media_path: ~/.local/share/containers/storage/media
 jellyfin_version: latest
 jellyfin_web_port: 8096
