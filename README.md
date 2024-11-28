@@ -24,7 +24,7 @@ A role to deploy Jellyfin using rootless Podman with systemd.
 |jellyfin_cache_path|The path for the Jellyfin cache.|str|False|~/.config/jellyfin/cache|
 |jellyfin_config_path|The path for the Jellyfin config.|str|False|~/.config/jellyfin/config|
 |jellyfin_hardware_encoding|If hardware encoding should be used.|bool|False|False|
-|jellyfin_media_path|The path for the Jellyfin media.<br>It is recommended to share the same data directory with other media managing services|str|False|~/.config/jellyfin/media|
+|jellyfin_media_path|The path for the Jellyfin media.<br>It is recommended to share the same data directory with other media managing services|str|False|~/.local/share/containers/storage/media|
 |jellyfin_version|The version of Jellyfin to install.|str|False|latest|
 |jellyfin_web_port|The port for the web server.|int|False|8096|
 

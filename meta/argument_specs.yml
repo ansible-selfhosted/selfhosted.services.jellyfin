@@ -32,7 +32,7 @@ argument_specs:
       jellyfin_media_path:
         type: str
         required: false
-        default: ~/.config/jellyfin/media
+        default: ~/.local/share/containers/storage/media
         description:
           - The path for the Jellyfin media.
           - It is recommended to share the same data directory with other media managing services
