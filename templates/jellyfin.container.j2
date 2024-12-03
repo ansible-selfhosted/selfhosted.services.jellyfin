@@ -11,7 +11,7 @@ AddDevice=/dev/dri/:/dev/dri/
 {% endif %}
 Volume={{ jellyfin_config_path }}:/config:Z
 Volume={{ jellyfin_cache_path }}:/cache:Z
-Volume={{ jellyfin_media_path }}:/media:Z
+Volume={{ jellyfin_media_path }}:/media:z
 
 [Service]
 # Inform systemd of additional exit status
