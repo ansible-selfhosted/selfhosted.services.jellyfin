@@ -1,7 +1,11 @@
 ---
+jellyfin_additional_options: []
+jellyfin_cache_label: ''
 jellyfin_cache_path: ~/.config/jellyfin/cache
+jellyfin_config_label: ''
 jellyfin_config_path: ~/.config/jellyfin/config
+jellyfin_data_label: ''
+jellyfin_data_path: ~/.local/share/containers/storage/media
 jellyfin_hardware_encoding: false
-jellyfin_media_path: ~/.local/share/containers/storage/media
 jellyfin_version: latest
 jellyfin_web_port: 8096

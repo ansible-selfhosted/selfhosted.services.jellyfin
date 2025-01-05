@@ -10,7 +10,7 @@
   ansible.builtin.set_fact:
     jellyfin_cache_path: "{{  jellyfin_cache_path | replace('~', user_info.home) }}"
     jellyfin_config_path: "{{ jellyfin_config_path | replace('~', user_info.home) }}"
-    jellyfin_media_path: "{{  jellyfin_media_path | replace('~', user_info.home) }}"
+    jellyfin_data_path: "{{  jellyfin_data_path | replace('~', user_info.home) }}"
 
 - name: Create Jellyfin directories
   ansible.builtin.file:
@@ -20,7 +20,7 @@
   loop:
     - "{{ jellyfin_cache_path }}"
     - "{{ jellyfin_config_path }}"
-    - "{{ jellyfin_media_path }}"
+    - "{{ jellyfin_data_path }}"
 
 - name: Put container related files on the host
   ansible.builtin.template:

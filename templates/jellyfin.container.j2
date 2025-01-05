@@ -9,9 +9,15 @@ UserNS=keep-id
 {% if jellyfin_hardware_encoding %}
 AddDevice=/dev/dri/:/dev/dri/
 {% endif %}
-Volume={{ jellyfin_config_path }}:/config:Z
-Volume={{ jellyfin_cache_path }}:/cache:Z
-Volume={{ jellyfin_media_path }}:/media:z
+Volume={{ jellyfin_config_path }}:/config{% if jellyfin_config_label|length > 0 %}:{{ jellyfin_config_label }}{% endif %}
+
+Volume={{ jellyfin_cache_path }}:/cache{% if jellyfin_cache_label|length > 0 %}:{{ jellyfin_cache_label }}{% endif %}
+
+Volume={{ jellyfin_data_path }}:/data{% if jellyfin_data_label|length > 0 %}:{{ jellyfin_data_label }}{% endif %}
+
+{% for jellyfin_var in jellyfin_additional_options %}
+{{ jellyfin_var }}
+{% endfor %}
 
 [Service]
 # Inform systemd of additional exit status
